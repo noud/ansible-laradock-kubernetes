@@ -1,3 +1,13 @@
 DOCKERHOST_IP: '127.0.0.1'
 LARADOCK_LOCATION: '/home/ubuntu/laradock_dev'
 LARAVEL_APP_NAME: 'myapp'
+# PHP Extensions for Databrydge
+INSTALL_INTL: true
+INSTALL_AMQP: true
+INSTALL_APCU: true
+# CURL
+INSTALL_SOAP: true
+# also installs XML
+INSTALL_MONGO: true
+# SODIUM
+# As of PHP 7.2.0 this extension is bundled with PHP.

@@ -14,6 +14,9 @@ services:
                 - INSTALL_DRUSH=false
                 - COMPOSER_GLOBAL_INSTALL=false
                 - INSTALL_WORKSPACE_SSH=false
+                - INSTALL_AMQP={{ INSTALL_AMQP }}
+                - INSTALL_SOAP={{ INSTALL_SOAP }}
+                - INSTALL_MONGO={{ INSTALL_MONGO }}
                 - PUID=1000
                 - PGID=1000
         volumes_from:
@@ -34,6 +37,11 @@ services:
                 - INSTALL_ZIP_ARCHIVE=false
                 - INSTALL_MEMCACHED=false
                 - INSTALL_OPCACHE=false
+                - INSTALL_INTL={{ INSTALL_INTL }}
+                - INSTALL_AMQP={{ INSTALL_AMQP }}
+                - INSTALL_APCU={{ INSTALL_APCU }}
+                - INSTALL_SOAP={{ INSTALL_SOAP }}
+                - INSTALL_MONGO={{ INSTALL_MONGO }}
             dockerfile: Dockerfile-70
         volumes_from:
             - volumes_source
